@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom"; //Routes used for navigating to different pages and components.
+import LoginPage from "./pages/LoginPage";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
-  )
-}
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+};
 
-export default App
+export default App;
